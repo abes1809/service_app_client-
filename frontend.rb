@@ -67,11 +67,30 @@ class Frontend
 
       elsif input_option == "5"
 
-        services_create_action
+        puts "What type of service would you like to create?"
+        puts "     [1] Law Service"
+        puts "     [2] Mental Health Service"
+        puts "     [3] Shelter Service"
+
+        service_type = gets.chomp 
+
+        if service_type == "1"
+
+          law_services_create_action
+
+        elsif service_type == "2"
+
+          mental_health_services_create_action
+
+        elsif service_type == "3"
+
+          shelters_create_action
+
+        end 
 
       elsif input_option == "6"
 
-        services_update_action
+       services_update_action
 
       elsif input_option == "7"
 

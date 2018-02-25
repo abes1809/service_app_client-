@@ -31,32 +31,35 @@ module ServicesViews
   def services_create_view 
     service_params = {}
 
-    puts "What type of service would you like to create?"
-    puts "     [1] Law Service"
-    puts "     [2] Mental Health Service"
-    puts "     [3] Shelter Service"
-
-    service_type = gets.chomp 
-
-    if service_type == "1"
-
-      service_params[:category] = "LawService"
-
-    elsif service_type == "2"
-
-      service_params[:category] = "MentalHealthService"
-
-    elsif service_type == "3"
-
-      service_params[:category] = "ShelterService"
-
-    end 
-
     puts "Name: "
     service_params[:name] = gets.chomp 
 
     puts "Service Specialty: "
     service_params[:specialty] = gets.chomp 
+
+    print "Email: "
+    service_params[:email] = gets.chomp
+
+    print "Phone Number: "
+    service_params[:phone_number] = gets.chomp
+
+    print "Address: "
+    service_params[:address] = gets.chomp 
+
+    print "City: "
+    service_params[:city] = gets.chomp 
+
+    print "State: "
+    service_params[:state] = gets.chomp
+
+    print "Zip Code: "
+    service_params[:zip] = gets.chomp
+
+    puts "Prefered Method of Communication: "
+    puts "  [1] email"
+    puts "  [2] phone"
+    puts "  [3] in person"
+    service_params[:prefered_contact_method] = gets.chomp
 
     service_params
 
